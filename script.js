@@ -6,7 +6,7 @@ const maxScore = 5;
 
 const body = document.querySelector("body");
 const button = document.querySelectorAll("button");
-const playerChoice = document.querySelector(".display-selection");
+const displaySelection = document.querySelector(".display-selection");
 const displayRound = document.querySelector(".display-round");
 const displayResult = document.querySelector(".display-result");
 const displayScore = document.querySelector(".display-score");
@@ -19,7 +19,7 @@ button.forEach((button) => {
   button.addEventListener("click", function (e) {
     playerSelection = e.target.value;
 
-    playerChoice.textContent = `You choose ${playerSelection}!`;
+    displaySelection.textContent = `You choose ${playerSelection}!`;
 
     playRound(computerSelection, playerSelection);
     displayScore.textContent = `Human: ${humanScore} vs Computer: ${computerScore}`;
